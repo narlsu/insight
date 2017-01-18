@@ -1,3 +1,5 @@
+'use strict';
+
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync').create();
@@ -18,8 +20,12 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 
 gulp.task('browserSync', function() {
   browserSync.init({
-    server: {
-      baseDir: './'
-    },
+    // This makes the shit work because ports and crap
+    proxy: "localhost/Insight",
+    port: 8000  
+    // server: {
+    //   // baseDir: './'
+      
+    // },
   })
 })
