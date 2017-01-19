@@ -48,9 +48,39 @@
     </div>
   </div>
 </nav>
+<!-- Modal / Reveal -->
+<p><a data-open="exampleModal1">Click me for a modal</a></p>
+
+<div class="reveal" id="exampleModal1" data-reveal>
+  <h1>Awesome. I Have It.</h1>
+  <p class="lead">Your couch. It is mine.</p>
+  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
+  <button class="close-button" data-close aria-label="Close reveal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<p><a data-open="exampleModal1">Click me for a modal</a></p>
 
 
  <?php $this->content(); ?>
+
+<!-- Pagination -->
+<ul class="pagination" role="navigation" aria-label="Pagination">
+  <li class="disabled">Previous <span class="show-for-sr">page</span></li>
+  <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+  <li><a href="#0" aria-label="Page 2">2</a></li>
+  <li><a href="#0" aria-label="Page 3">3</a></li>
+  <li><a href="#0" aria-label="Page 4">4</a></li>
+  <li class="ellipsis" aria-hidden="true"></li>
+  <li><a href="#0" aria-label="Page 12">12</a></li>
+  <li><a href="#0" aria-label="Page 13">13</a></li>
+  <li><a href="#0" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+</ul>
+<script type="text/javascript" src="js/vendor/jquery.js"></script>
+<script type="text/javascript" src="js/vendor/foundation.min.js"></script>
+</body>
+
 
  
 
