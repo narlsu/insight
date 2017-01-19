@@ -19,6 +19,12 @@ namespace App\Controllers;
       $controller->show();
       break;
 
+    case 'login':
+      
+    $controller = new LoginController();
+    $controller->show();
+    break;
+
     default:
       echo "Error 404 ! Page not found !";
       break;

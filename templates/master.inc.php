@@ -77,8 +77,12 @@
   <li><a href="#0" aria-label="Page 13">13</a></li>
   <li><a href="#0" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
 </ul>
-<script type="text/javascript" src="js/vendor/jquery.js"></script>
-<script type="text/javascript" src="js/vendor/foundation.min.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/foundation.js"></script>
+<script type="text/javascript" src="js/what-input.js"></script>
+<script>
+    $(document).foundation();
+</script>
 </body>
 
 
