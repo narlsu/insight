@@ -5,6 +5,9 @@ $brand-color: #333;
 
 
 
-body {
-
+.background-image {
+	background-image: url(../images/insightbg.jpg);
+	max-width: 75rem;
+	margin: auto;
+	height: 30%;
 }

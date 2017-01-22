@@ -18,26 +18,22 @@
     </div>
 
 
+<div class="background-image">
+      <h1 class="text-center">waddup</h1>
+</div>
+<div id="nav-cont">
 <nav class="row">
   <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
     <button class="menu-icon" type="button" data-toggle></button>
     <div class="title-bar-title">Menu</div>
   </div>
-
   <div class="top-bar" id="example-menu">
     <div class="top-bar-left">
-      <ul class="dropdown menu" data-dropdown-menu>
+      <ul class="vertical medium-horizontal menu" data-dropdown-menu>
         <li class="menu-text">Insight</li>
-        <li class="has-submenu">
-          <a href="#0">One</a>
-          <ul class="submenu menu vertical" data-submenu>
-            <li><a href="#0">One</a></li>
-            <li><a href="#0">Two</a></li>
-            <li><a href="#0">Three</a></li>
-          </ul>
-        </li>
-        <li><a href="#0">Two</a></li>
-        <li><a href="#0">Three</a></li>
+        <li><a href="#0">Home</a></li>
+        <li><a href="#0">About</a></li>
+        <li><a href="#0">Login</a></li>
       </ul>
     </div>
     <div class="top-bar-right">
@@ -48,6 +44,7 @@
     </div>
   </div>
 </nav>
+</div>
 <!-- Modal / Reveal -->
 <p><a data-open="exampleModal1">Click me for a modal</a></p>
 
