@@ -5,45 +5,46 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation for Sites</title>
-    <link rel="stylesheet" href="css/foundation.min.css">
+    <!-- <link rel="stylesheet" href="css/foundation.min.css"> -->
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
+
   <body>
-    <div class="row">
-      <div class="large-12 columns">
-
-        <h1>Welcome to Insight</h1>
-      </div>
-    </div>
-
-
-<div class="background-image">
-      <h1 class="text-center">waddup</h1>
-</div>
-<div id="nav-cont">
-<nav class="row">
+<div id="outer-cont">
+  <div class="background-image">
+    <div id="logo-container">
+      <img id="logo" src="images/logo.png" alt="Insight Logo">
+        
+        <nav id="nav-bot" class="row">
   <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="medium">
     <button class="menu-icon" type="button" data-toggle></button>
     <div class="title-bar-title">Menu</div>
   </div>
   <div class="top-bar" id="example-menu">
     <div class="top-bar-left">
-      <ul class="vertical medium-horizontal menu" data-dropdown-menu>
+      <ul id="bottom" class="vertical medium-horizontal menu" data-dropdown-menu>
         <li class="menu-text">Insight</li>
-        <li><a href="#0">Home</a></li>
-        <li><a href="#0">About</a></li>
-        <li><a href="#0">Login</a></li>
+        <li<?php if($page === "home"):?> class="active nav-links" <?php endif; ?>><a href=".\">Home <span class="sr-only">(current)</span></a></li>
+        <li><a class="nav-links" href="#0">About</a></li>
+        <li<?php if($page === "login"):?> class="active" <?php endif; ?>><a href=".\?page=login">Login</a></li>
       </ul>
     </div>
     <div class="top-bar-right">
       <ul class="menu">
-        <li><input type="search" placeholder="Search"></li>
+        <li><input class="search-style" type="search" placeholder="Search"></li>
         <li><button type="button" class="button">Search</button></li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+    </div>
+  </div>
+</div>
+<div id="nav-cont">
+
 </div>
 <!-- Modal / Reveal -->
 <p><a data-open="exampleModal1">Click me for a modal</a></p>

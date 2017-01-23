@@ -1,4 +1,4 @@
-<h1>This is Home page Content</h1>
+<h1>Home Page Contents</h1>
 <div id="bob">
 	dhdhd
 </div>

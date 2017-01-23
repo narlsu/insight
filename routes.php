@@ -21,8 +21,8 @@ namespace App\Controllers;
 
     case 'login':
       
-    $controller = new LoginController();
-    $controller->show();
+    $controller = new AccountController;
+    $controller->showLoginForm();
     break;
 
     default:

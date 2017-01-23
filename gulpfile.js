@@ -21,7 +21,7 @@ gulp.task('watch', ['browserSync', 'sass'], function(){
 gulp.task('browserSync', function() {
   browserSync.init({
     // This makes the shit work because ports and crap
-    proxy: "localhost/Insight",
+    proxy: "localhost/",
     // "http://localhost/~845849726/Insight/" "localhost/Insight"
     port: 8000  
     // server: {
