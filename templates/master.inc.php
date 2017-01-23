@@ -25,8 +25,8 @@
     <div class="top-bar-left">
       <ul id="bottom" class="vertical medium-horizontal menu" data-dropdown-menu>
         <li class="menu-text">Insight</li>
-        <li<?php if($page === "home"):?> class="active nav-links" <?php endif; ?>><a href=".\">Home <span class="sr-only">(current)</span></a></li>
-        <li><a class="nav-links" href="#0">About</a></li>
+        <li<?php if($page === "home"):?> class="active nav-links" <?php endif; ?>><a href=".\">Home</a></li>
+        <li<?php if($page === "about"):?> class="active nav-links" <?php endif; ?>><a href=".\?page=about">About</a></li> 
         <li<?php if($page === "login"):?> class="active" <?php endif; ?>><a href=".\?page=login">Login</a></li>
       </ul>
     </div>
@@ -43,23 +43,6 @@
     </div>
   </div>
 </div>
-<div id="nav-cont">
-
-</div>
-<!-- Modal / Reveal -->
-<p><a data-open="exampleModal1">Click me for a modal</a></p>
-
-<div class="reveal" id="exampleModal1" data-reveal>
-  <h1>Awesome. I Have It.</h1>
-  <p class="lead">Your couch. It is mine.</p>
-  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-  <button class="close-button" data-close aria-label="Close reveal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-
-<p><a data-open="exampleModal1">Click me for a modal</a></p>
-
 
  <?php $this->content(); ?>
 

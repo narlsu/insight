@@ -35,10 +35,8 @@ body {
 #login-form {
 	text-align: center;
 	margin: 0 auto;
+	margin-top: 100px;
 	/*width: 50%;*/
-}
-.title-bar {
-	bottom: 0;
 }
 label {
 	text-align: center !important;
@@ -59,6 +57,8 @@ label {
 }*/
 .top-bar {
     background-color: rgba(0, 0, 0, 0.6);
+    position: relative;
+    z-index: 10;
 }
 .top-bar ul {
 	background-color: transparent;
@@ -66,6 +66,7 @@ label {
 }
 #nav-bot {
 	position: absolute;
+	top: 340px;
 	bottom: 0;
 	width: 100%;
 }
@@ -82,17 +83,48 @@ label {
 	color: white;
 }
 .title-bar {
-
-	bottom: 0;
+	z-index: 10;
+	top: 270px;
 	width: 100%;
-}
-#bottom{
-
-	bottom: 0;
 }
 .menu-text {
 	color: white;
 }
+.background-travel {
+	background-image: url(../images/bgform.jpg);
+	width: 100%;
+		background-size: cover;
+	background-position: 50% 50%;
+	position: relative;
+	border-radius: 1.5%;
+}
+.white {
+	color: white;
+	font-family: 'Montserrat';
+	font-size: 1.2em;
+}
+.pass-forgot {
+	margin-bottom: 15px;
+	display: block;
+}
+/*Unsure if i want to keep, makes the focus turn black*/
+/*.input-foc {
+		border: 0px solid black;
+	border-radius: 5px;
+	background-color: black !important;
+	color: white;
+}*/
+
+/*For the menu bar to make it work 640px width+*/
+@media screen and (min-device-width: 40.00em) {
+	#nav-bot {
+		bottom: 0;
+		top: 320PX;
+		position: absolute;
+		z-index: 10;
+	}
+}
+
 /*.top-bar-left li {
 	background-color: transparent;
 	background-color: rgba(0, 0, 0, 0.8);
