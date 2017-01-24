@@ -27,7 +27,19 @@
         <li class="menu-text">Insight</li>
         <li<?php if($page === "home"):?> class="active nav-links" <?php endif; ?>><a href=".\">Home</a></li>
         <li<?php if($page === "about"):?> class="active nav-links" <?php endif; ?>><a href=".\?page=about">About</a></li> 
-        <li<?php if($page === "login"):?> class="active" <?php endif; ?>><a href=".\?page=login">Login</a></li>
+                
+        <?php if(isset($_SESSION['user_id'])): ?>
+
+          <li<?php if($page === "account"):?> class="active" <?php endif; ?>><a href=".\?page=account"><?= $_SESSION['user_email']; ?></a></li>
+          <li<?php if($page === "logout"):?> class="active" <?php endif; ?>><a href=".\?page=logout">Logout</a></li>
+
+        <?php else: ?>
+
+          <li<?php if($page === "login"):?> class="active" <?php endif; ?>><a href=".\?page=login">Login</a></li>
+          <li<?php if($page === "register"):?> class="active" <?php endif; ?>><a href=".\?page=register">Register</a></li>
+
+        <?php endif; ?>
+
       </ul>
     </div>
     <div class="top-bar-right">

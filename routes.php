@@ -21,9 +21,45 @@ namespace App\Controllers;
 
     case 'login':
       
-    $controller = new AccountController;
-    $controller->showLoginForm();
+      $controller = new AccountController;
+      $controller->showLoginForm();
+      break;
+
+    case 'login.try':
+      $controller = new AccountController;
+      $controller->processLoginForm();
+      break;
+
+    case 'register';
+      $controller = new RegisterController();
+      $controller->show();
+      break;
+
+    case 'register.store':
+      $controller = new RegisterController();
+      $controller->store();
+      break;
+
+    case 'account';
+      if ( isset($_SESSION['user_id'])) {
+
+      $controller = new AccountController;
+      $controller->show();
+        
+      } else {
+        header('Location: index.php?page=login');
+      }
+
     break;
+
+    case 'logout';
+      unset($_SESSION['user_id']);
+      unset($_SESSION['privilege']);
+       unset($_SESSION['user_email']);
+      header('Location: index.php');
+      break;
+
+
 
     default:
       echo "Error 404 ! Page not found !";
