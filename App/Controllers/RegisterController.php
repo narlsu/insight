@@ -35,13 +35,14 @@ Class RegisterController
 
 		} else {
 			// check database
-			$errors['email'] = 'please enter a valid E-mail address';
+
+			$errors['email'] = 'Please enter a valid E-mail address.';
 		}
 
 		
 		// Passwords match and are atleast 8 characters long
 		if ( strlen($_POST['password']) == 0) {
-			$errors['password'] = 'Required';
+			$errors['password'] = 'Required.';
 		} elseif (strlen($_POST['password']) < 8) {
 			$errors['password'] = 'Must be at least 8 characters long';
 		} elseif ($_POST['password'] != $_POST['password2']) {

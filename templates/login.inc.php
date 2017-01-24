@@ -3,7 +3,8 @@
           <div class="row">
             <div class="large-12 medium-12 columns">
               <label for="email" class="white middle">Email</label>
-              <input id="email" name="email" class="input-foc" type="text" placeholder="Username" />
+
+              <input id="email" name="email" class="input-foc" type="text" placeholder="Email" />
             </div>
           </div>
 
@@ -19,9 +20,13 @@
               <fieldset class="large-12 medium-12 columns">
               <button class="button" type="submit" name="login" value="Log In">Submit
               </button>
-                <?php if(isset($this->data['login-error'])): ?>
-                  <p><?= $this->data['login-error'] ?></p>
-                <?php endif; ?>
+
+                <span class="error-color">
+                  <?php if(isset($this->data['login-error'])): ?>
+                    <p><?= $this->data['login-error'] ?></p>
+                  <?php endif; ?>
+                </span>
+                
               </fieldset>
           </div>
       </div>
