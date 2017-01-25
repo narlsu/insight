@@ -34,4 +34,22 @@ Class AccountController
     	$view = new LoginView($errors);
     	$view->render();
     }
+
+     public function newPost() {
+            
+
+        // Validation
+
+        // If good validation
+
+        // Upload the file, make thumbnail too
+
+        // PostModel
+
+        // Redirect to home page
+        
+
+
+
+    }
 }

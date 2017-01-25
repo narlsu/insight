@@ -43,13 +43,18 @@ namespace App\Controllers;
     case 'account';
       if ( isset($_SESSION['user_id'])) {
 
-      $controller = new AccountController;
+      $controller = new AccountController();
       $controller->show();
         
       } else {
         header('Location: index.php?page=login');
       }
 
+    break;
+
+    case 'account.newPost':
+      $controller = new AccountController();
+      $controller->newPost();
     break;
 
     case 'logout';

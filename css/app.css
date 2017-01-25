@@ -161,6 +161,9 @@ label {
   color: white;
   background: black; }
 
+#modal-width {
+  width: 80%; }
+
 /*Unsure if i want to keep, makes the focus turn black*/
 /*.input-foc {
 		border: 0px solid black;

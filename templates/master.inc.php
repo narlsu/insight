@@ -56,6 +56,7 @@
   </div>
 </div>
 
+
  <?php $this->content(); ?>
 
 <!-- Pagination -->
