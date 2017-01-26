@@ -52,8 +52,8 @@ namespace App\Controllers;
 
     break;
 
-    case 'account.newPost':
-      $controller = new AccountController();
+    case 'travels.newPost':
+      $controller = new TravelsController();
       $controller->newPost();
     break;
 

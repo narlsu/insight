@@ -1,3 +1,14 @@
+     <?php if(isset($_SESSION['error.movie'])): ?>
+
+    <script type="text/javascript">
+      
+      $('#super-modal').foundation('open');
+    </script>
+
+      <?php endif; ?>
+
+
+
       <div class="row">
         <div class="">
 
@@ -9,18 +20,23 @@
 				<p><a data-open="super-modal">Blog Editor</a></p>
 
 				<div class="reveal large-12" id="super-modal" data-reveal>
-				<form action="./?page=account.newPost" method="post" enctype="multipart/form-data">
+				<form action="./?page=travels.newPost" method="post" enctype="multipart/form-data">
 				  <h1>Welcome to the blog editor</h1>
 
 				  <label for="title">Title</label>
 				  <input id="title" type="text" name="title">
 
+				<span class="error-color"><?php echo $travelPost->errors['title']?></span>
+					
 				  <label for="description">Description</label>
 				  <input type="text" id="description" name="description">
+
+				<span class="error-color"><?php echo $travelPost->errors['description']?></span>
 
 				  <label for="poster" >Image Upload</label>
 				  <input type="file" id="poster" name="poster">
 
+				<span class="error-color"><?php echo $travelPost->errors['poster']?></span>
 				  
 				  <div class="row">
 				  	<fieldset class="large-12 medium-12 columns">

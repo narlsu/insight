@@ -76,7 +76,15 @@
 <script type="text/javascript" src="js/what-input.js"></script>
 <script>
     $(document).foundation();
+
+    // var $modal = $('#super-modal');
+
+    // $.ajax('./?page=account')
+    //   .done(function(resp){
+    //     $modal.html(resp).foundation('open');
+    // });
 </script>
+ 
 </body>
 
 

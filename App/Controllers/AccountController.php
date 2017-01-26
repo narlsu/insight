@@ -4,6 +4,7 @@ namespace App\Controllers;
 use App\Views\AccountView;
 use App\models\UsersModel;
 use App\Views\LoginView;
+use App\Models\TravelsModel;
 
 Class AccountController
 {
@@ -35,21 +36,4 @@ Class AccountController
     	$view->render();
     }
 
-     public function newPost() {
-            
-
-        // Validation
-
-        // If good validation
-
-        // Upload the file, make thumbnail too
-
-        // PostModel
-
-        // Redirect to home page
-        
-
-
-
-    }
 }
