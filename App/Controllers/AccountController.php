@@ -9,7 +9,10 @@ use App\Models\TravelsModel;
 Class AccountController
 {
 	public function show(){
-		$view = new AccountView();
+        $controller = new TravelsController();
+        $travelPost= $controller->getPostData();
+
+		$view = new AccountView(compact('travelPost'));
      	$view->render();
      }
 
@@ -35,5 +38,6 @@ Class AccountController
     	$view = new LoginView($errors);
     	$view->render();
     }
+
 
 }

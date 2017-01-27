@@ -16,7 +16,7 @@ Class TravelsController
         $travelPost = new TravelsModel($_POST);
 
         if(! $travelPost->isValid()){
-            $_SESSION['error.movie'] = $travelPost;
+            $_SESSION['error.post'] = $travelPost;
             header("Location:./?page=account&error=true");
             exit();
         }
@@ -24,8 +24,9 @@ Class TravelsController
             $travelsPost->savePoster($_FILES['poster']['tmp_name']);
         }
 
+        unset($_SESSION['error.post']);
         $travelPost->save(); 
-        header("Location:./?page=home". $movie->id);
+        header("Location:./?page=home". $post->id);
 
 
         // Validation
@@ -41,6 +42,27 @@ Class TravelsController
 
 
 
+    }
+
+    public function showAll(){
+
+	$movies = new TravelsModel();
+	$travelContents = $movies->showAll();
+	$view = new HomeView(compact('travelContents'));
+    $view->render();
+
+	}
+
+    public function getPostData($id = null){
+
+			if(isset($_SESSION['error.post'])){
+			$travelPost = $_SESSION['error.post'];
+			// unset($_SESSION['error.post']);
+
+			} else {
+			$travelPost = new TravelsModel($id);
+		}
+		return $travelPost;
     }
 	// public function showAll(){
 

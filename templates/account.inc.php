@@ -1,11 +1,4 @@
-     <?php if(isset($_SESSION['error.movie'])): ?>
-
-    <script type="text/javascript">
-      
-      $('#super-modal').foundation('open');
-    </script>
-
-      <?php endif; ?>
+  
 
 
 
@@ -56,3 +49,7 @@
 
         </div>
       </div>
+
+
+
+         

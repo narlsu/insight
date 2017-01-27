@@ -113,12 +113,14 @@ abstract Class DatabaseModel
 
 		$result = $statement->execute();
 
-		$moviesArray = [];
+				$searchresults = [];
 
-		while ($record = $statement->fetch(PDO::FETCH_ASSOC)){
-			array_push($moviesArray, $record);
+		while ($record = $statement->fetch(PDO::FETCH_ASSOC)) {
+			$model = new static;
+			$model->data = $record;
+			array_push($searchresults, $model);
 		}
-		return $moviesArray;
+		return $searchresults;
 
 	}
 

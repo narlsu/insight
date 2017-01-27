@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Views\HomeView;
+use App\Models\TravelsModel;
 
 Class HomeController
 {
@@ -10,7 +11,10 @@ Class HomeController
 
 	  $moviesuggest = $this->getMovieSuggestFormData();
 
-      $view = new HomeView();
+	  $movies = new TravelsModel();
+	$travelContents = $movies->showAll();
+	
+      $view = new HomeView(compact('travelContents'));
       $view->render();
 	}
 

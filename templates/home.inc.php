@@ -1,4 +1,3 @@
 <h1>Home Page Contents</h1>
-<div id="bob">
-	dhdhd
+<?php var_dump($travelContents) ?>
 </div>

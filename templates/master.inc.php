@@ -84,6 +84,15 @@
     //     $modal.html(resp).foundation('open');
     // });
 </script>
+
+<?php if(isset($_SESSION['error.post'])): ?>
+
+    <script type="text/javascript">
+
+      $('#super-modal').foundation('open');
+    </script>
+
+      <?php endif; ?>
  
 </body>
 
