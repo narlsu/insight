@@ -80,6 +80,9 @@ label {
 .search-style:focus {
   background-color: transparent; }
 
+h1 {
+  font-size: 2em; }
+
 .nav-links {
   color: white; }
 
@@ -164,6 +167,19 @@ label {
 #modal-width {
   width: 80%; }
 
+.travel-div {
+  background-color: red;
+  min-height: 100px;
+  width: 80%;
+  max-width: 100px; }
+
+.travel-contain {
+  display: flex;
+  justify-content: space-between; }
+
+/*.travel-contain {
+ 	width: 100%;
+}*/
 /*Unsure if i want to keep, makes the focus turn black*/
 /*.input-foc {
 		border: 0px solid black;
