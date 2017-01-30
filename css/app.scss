@@ -104,7 +104,7 @@ h1 {
 .background-travel {
 	background-image: url(../images/bgform.jpg);
 	width: 100%;
-		background-size: cover;
+	background-size: cover;
 	background-position: 50% 50%;
 	position: relative;
 	border-radius: 1.5%;
@@ -163,22 +163,57 @@ h1 {
 #modal-width {
 	width: 80%;
 }
-.travel-div {
-	background-color: red;
-	min-height: 100px;
-	// padding: 10px;
-	width: 80%;
-	max-width: 100px;
-	// box-sizing: border-box;
-	// margin: 0 10px;
-}
+
+/*This is the home page content div styling.*/
 .travel-contain {
-	display: flex;
-	justify-content: space-between;
+ 	width: 80%;
 }
-/*.travel-contain {
+.travel-div {
+	min-height: 100px;
+	display: flex;
+	justify-content: center;
+	padding: 0;
+
+}
+.fig-cont {
+	width: 100%;
+	background-color: grey;
+	height: 200px;
+	margin: 10px;
+	width: 200px;
+	min-width: 200px;
+	position: relative;
+	display: flex;
+}
+/*Captions for the thumbnails*/
+.home-mid-a {
+	width: 100%;
+	display: block;
+	display: flex;
+}
+.figcap-home {
+	top: 0; 
+	left: 0; 
+	bottom: 0; 
+	right: 0;
+	margin: auto auto;
+}
+/*Medium screen sizing*/
+@media screen and (min-width: 40em) {
+	.fig-cont {
+	width: 100%;
+	background-color: grey;
+	height: 200px;
+	margin: 10px;
+	min-width: 200px;
+	}
+
+}
+@media screen and (min-width: 64em) {
+	.travel-contain {
  	width: 100%;
-}*/
+	}
+}
 /*Unsure if i want to keep, makes the focus turn black*/
 /*.input-foc {
 		border: 0px solid black;

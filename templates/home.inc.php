@@ -1,33 +1,30 @@
 <h1>Home Page Contents</h1>
 
-	<div class="row small-up-1 medium-up-4 large-up-4 large-10 medium-10 small-10 columns travel-contain">
+	<div class="row travel-contain">
 		<div class="large-3 medium-6 small-12 columns travel-div">
-			<figure>
+			<figure class="fig-cont">
 				
-				<figcaption></figcaption>
+				<a class="home-mid-a" href="#"><figcaption class="figcap-home">Example</figcaption></a>
 			</figure>
 		</div>
 
 		<div class="large-3 medium-6 small-12 columns travel-div">
-			<figure>
+			<figure class="fig-cont">
 
-				<figcaption></figcaption>
+				<a class="home-mid-a" href="#"><figcaption class="figcap-home">Example</figcaption></a>
 			</figure>
 		</div>
 
 		<div class="large-3 medium-6 small-12 columns travel-div">
-			<figure>
+			<figure class="fig-cont">
 
-				<figcaption></figcaption>
+				<a class="home-mid-a" href="#"><figcaption class="figcap-home">Example</figcaption></a>
 			</figure>
 		</div>
-
 		<div class="large-3 medium-6 small-12 columns travel-div">
-			<figure>
+			<figure class="fig-cont">
 
-				<figcaption></figcaption>
+				<a class="home-mid-a" href="#"><figcaption class="figcap-home">Example</figcaption></a>
 			</figure>
-		</div>
+		</div>		
 	</div>
-
-</div>

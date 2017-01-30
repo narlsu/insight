@@ -167,19 +167,52 @@ h1 {
 #modal-width {
   width: 80%; }
 
-.travel-div {
-  background-color: red;
-  min-height: 100px;
-  width: 80%;
-  max-width: 100px; }
-
+/*This is the home page content div styling.*/
 .travel-contain {
-  display: flex;
-  justify-content: space-between; }
+  width: 80%; }
 
-/*.travel-contain {
- 	width: 100%;
-}*/
+.travel-div {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  padding: 0; }
+
+.fig-cont {
+  width: 100%;
+  background-color: grey;
+  height: 200px;
+  margin: 10px;
+  width: 200px;
+  min-width: 200px;
+  position: relative;
+  display: flex; }
+
+/*Captions for the thumbnails*/
+.home-mid-a {
+  width: 100%;
+  display: block;
+  display: flex; }
+
+.figcap-home {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto; }
+
+/*Medium screen sizing*/
+@media screen and (min-width: 40em) {
+  .fig-cont {
+    width: 100%;
+    background-color: grey;
+    height: 200px;
+    margin: 10px;
+    min-width: 200px; } }
+
+@media screen and (min-width: 64em) {
+  .travel-contain {
+    width: 100%; } }
+
 /*Unsure if i want to keep, makes the focus turn black*/
 /*.input-foc {
 		border: 0px solid black;
