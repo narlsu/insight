@@ -49,6 +49,12 @@ namespace App\Controllers;
       } else {
         header('Location: index.php?page=login');
       }
+    
+    case 'travelhighlight':
+
+      $controller = new TravelsController();
+      $controller->showTravelHighlight();
+      break;
 
     break;
 

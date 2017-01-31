@@ -7,6 +7,7 @@ namespace App\Controllers;
 // use App\Views\MovieCreateView;
 // use App\Models\CommentsModel;
 use App\Models\TravelsModel;
+use App\models\CommentsModel;
 
 Class TravelsController
 {
@@ -73,16 +74,16 @@ Class TravelsController
  //     	$view->render();
 	// }
 
-	// public function showFeaturedMovie(){
-	// 	$featuredmovie = new MoviesModel($_GET['id']);
-	// 	$comments = new CommentsModel();
-	// 	$allComments = $comments->getAllComments($_GET['id']);
+	public function showTravelHighlight(){
+		$travelHighlight = new TravelsModel($_GET['id']);
+		$comments = new CommentsModel();
+		$allComments = $comments->getAllComments($_GET['id']);
 	
-	// 	$newcomment = $this->getErrorComment();
+		$newcomment = $this->getErrorComment();
 
-	// 	$view = new FeaturedMovieView(compact('featuredmovie', 'allComments', 'newcomment'));
-	// 	$view->render();
-	// }
+		$view = new TravelHighlightView(compact('travelHighlight', 'allComments', 'newcomment'));
+		$view->render();
+	}
 	// public function create(){
 
 	// 	$editMovie = $this->getFormData();
