@@ -21,7 +21,7 @@ Class TravelsController
             exit();
         }
         if ($_FILES['poster']['error'] === UPLOAD_ERR_OK) {
-            $travelsPost->savePoster($_FILES['poster']['tmp_name']);
+            $travelPost->savePoster($_FILES['poster']['tmp_name']);
         }
 
         unset($_SESSION['error.post']);

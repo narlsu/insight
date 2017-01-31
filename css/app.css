@@ -100,12 +100,39 @@ h1 {
   background-size: cover;
   background-position: 50% 50%;
   position: relative;
-  border-radius: 1.5%; }
+  border-radius: 2px;
+  border: 0; }
 
 .white {
   color: white;
   font-family: 'Montserrat';
   font-size: 1.2em; }
+
+#poster {
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  transition: background-color 0.25s ease-out, color 0.25s ease-out;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  border-radius: 0;
+  padding: 0.85em 1em;
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  background-color: #2199e8;
+  color: #fefefe; }
+
+.cent-h1 {
+  text-align: center;
+  color: white; }
+
+.flex-parent {
+  display: flex;
+  justify-content: center; }
+
+.flex-child {
+  display: block; }
 
 .pass-forgot {
   margin-bottom: 15px;
