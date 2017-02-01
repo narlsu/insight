@@ -11,6 +11,6 @@ Class TravelHighlightView extends View
 
 	public function content(){
 		extract($this->data);
-		include "templates/travelhiglight.inc.php";
+		include "templates/travelhighlight.inc.php";
 	}
 }

@@ -8,6 +8,8 @@ namespace App\Controllers;
 // use App\Models\CommentsModel;
 use App\Models\TravelsModel;
 use App\models\CommentsModel;
+use App\Views\TravelHighlightView;
+use App\Views\TravelsView;
 
 Class TravelsController
 {
@@ -65,23 +67,15 @@ Class TravelsController
 		}
 		return $travelPost;
     }
-	// public function showAll(){
-
-	// 	$movies = new MoviesModel();
-	// 	$moviesList = $movies->showAll();
-
-	// 	$view = new MoviesView(compact('moviesList'));
- //     	$view->render();
-	// }
 
 	public function showTravelHighlight(){
-		$travelHighlight = new TravelsModel($_GET['id']);
+		$travelPost = new TravelsModel($_GET['id']);
+
 		$comments = new CommentsModel();
 		$allComments = $comments->getAllComments($_GET['id']);
-	
 		$newcomment = $this->getErrorComment();
 
-		$view = new TravelHighlightView(compact('travelHighlight', 'allComments', 'newcomment'));
+		$view = new TravelHighlightView(compact('travelPost', 'allComments', 'newcomment'));
 		$view->render();
 	}
 	// public function create(){
@@ -155,16 +149,16 @@ Class TravelsController
 	// // 	$movie = new MoviesModel($id);
 	// // 	return $movie;
 	// // }
-	// public function getErrorComment(){
-	// 	if(isset($_SESSION['error.comment'])){
-	// 		$newcomment = $_SESSION['error.comment'];
+	public function getErrorComment(){
+		if(isset($_SESSION['error.comment'])){
+			$newcomment = $_SESSION['error.comment'];
 	
-	// 		unset($_SESSION['error.comment']);
-	// 	} else {
-	// 		$newcomment = new CommentsModel();
-	// 	}
-	// 	return $newcomment;
-	// }
+			unset($_SESSION['error.comment']);
+		} else {
+			$newcomment = new CommentsModel();
+		}
+		return $newcomment;
+	}
 	// public function getFormData($id = null){
 	// 		if(isset($_SESSION['error.movie'])){
 	// 		$editMovie = $_SESSION['error.movie'];

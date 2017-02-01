@@ -7,7 +7,7 @@ use PDO;
 Class CommentsModel extends DatabaseModel
 {
 	protected static $tablename = 'comments';
-	protected static $columns = ['id','comment','user_id','movie_id'];
+	protected static $columns = ['id','comment','user_id','travel_id'];
 
 	protected static $validationRules = [
 		'comment' => 'minlength:10,maxlength:100,inputValidate'
@@ -19,11 +19,11 @@ Class CommentsModel extends DatabaseModel
 		// get database connection
 		$db = $this->getDatabaseConnection();
 
-		$sql = "SELECT comments.comment, comments.id, movies.title, users.email
+		$sql = "SELECT comments.comment, comments.id, travels.title, users.email
 				FROM comments
-				JOIN movies ON comments.movie_id = movies.id
+				JOIN travels ON comments.travel_id = travels.id
 				JOIN users ON comments.user_id = users.id
-				WHERE comments.movie_id = :id";
+				WHERE comments.travel_id = :id";
 
 		$statement = $db->prepare($sql);
 

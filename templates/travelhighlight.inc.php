@@ -1,16 +1,13 @@
 <div class="row">
-		  <li class="active"><?= $travelPost->title;?></li>
-		</ol>
 
-	  <h1><?= $travelPost->title;?></h1>
-	  <small>Released in the year - <?= $travelPost->year;?></small>
-	  <?php if ($travelPost->poster != ""): ?> 
+	  	<h1><?= $travelPost->title;?></h1>
+	  	<?php if ($travelPost->poster != ""): ?> 
 	  	<div>
 		<img src="images/poster/<?=$travelPost->poster;?>" alt="<?= $travelPost->title; ?>">
 		</div>
-	  <?php else: ?>
-	  	<p>No posters found.</p>
-	  <?php endif; ?>
+	  		<?php else: ?>
+	  			<p>No posters found.</p>
+	  		<?php endif; ?>
 
 	  <p><?= $travelPost->description;?></p>	  
 	
@@ -55,4 +52,3 @@
   		<p>You need to be <a href="./?page=login">Logged in </a>to add comments.</p>
   	<?php endif; ?>
   </div>
-</div>

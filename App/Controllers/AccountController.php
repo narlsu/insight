@@ -14,6 +14,7 @@ Class AccountController
 
 		$view = new AccountView(compact('travelPost'));
      	$view->render();
+        //page reloads AFTER this is called, use die to test
      }
 
     public function showLoginForm() {

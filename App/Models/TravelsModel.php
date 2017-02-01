@@ -58,14 +58,14 @@ Class TravelsModel extends DatabaseModel
 		move_uploaded_file($filename, $destination);
 
 		$img = Image::make($destination);
-		$img->fit(300, 300);
+		$img->fit(900, 400);
 		$img->save($folder . $newFilename);
 
 		if(! is_dir("images/poster/thumbnails")){
 			mkdir('images/poster/thumbnails', 0777, true);
 		}
 		$img = Image::make($destination);
-		$img->fit(50,50);
+		$img->fit(280,200);
 		$img->save($folder ."thumbnails/". $newFilename);
 
 		// create thumbnails

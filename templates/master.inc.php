@@ -59,6 +59,7 @@
 
  <?php $this->content(); ?>
 
+
 <!-- Pagination -->
 <ul class="pagination" role="navigation" aria-label="Pagination">
   <li class="disabled">Previous <span class="show-for-sr">page</span></li>
